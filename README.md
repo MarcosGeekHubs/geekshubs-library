@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-# geekshubs-library
-
-
-hola
-=======
 # 📚 GeeksHubs Library Demo App
 
 API REST para gestionar libros.
@@ -16,7 +10,7 @@ Hay un archivo `docker-compose` que al ejecutarse levantará dos servicios:
 * Aplicacíon `:8080`
 * Base de Datos MySQL `:3306`
 
-Si necesitas ralizar cambios en la aplicación y quieres lanzarla directamente en tu máquina local necesitas instalar el intérprete de Go y después ejecutar: 
+Si necesitas ralizar cambios en la aplicación y quieres lanzarla directamente en tu máquina local necesitas instalar el intérprete de Go y después ejecutar:
 
 `make run`
 
@@ -26,7 +20,6 @@ y para lanzar los tests
 
 `make test`
 
-## API 
+## API
 
 La documentación de la API se encuentra [aquí](https://documenter.getpostman.com/view/255227/TVejgpWn)
->>>>>>> First commit
