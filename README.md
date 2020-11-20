@@ -1,5 +1,7 @@
 # 📚 GeeksHubs Library Demo App
 
+![Test](https://github.com/MarcosGeekHubs/geekshubs-library/workflows/Test/badge.svg)
+
 API REST para gestionar libros.
 
 ## Cómo funciona
