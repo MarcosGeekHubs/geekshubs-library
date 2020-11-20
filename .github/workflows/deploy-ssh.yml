@@ -1,6 +1,8 @@
 name: Deploy via SSH
 
-on: push
+on:
+  push:
+    branches: [ main ]
 
 jobs:
   build:
@@ -10,19 +12,10 @@ jobs:
       - name: pull
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: cd /home/ubuntu/geekshubs-library && git pull origin main
+          command: cd /home/ubuntu/geekshubs-library && git pull origin main  && docker-compose restart
           host: ${{ secrets.HOST }}
           username: ubuntu
           # passphrase: ${{ secrets.PASSPHRASE }}
           privateKey: ${{ secrets.PRIVATE_KEY}}
-      - name:  docker-compose up
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          command: cd /home/ubuntu/geekshubs-library && docker-compose up
-          host: ${{ secrets.HOST }}
-          username: ubuntu
-          # passphrase: ${{ secrets.PASSPHRASE }}
-          privateKey: ${{ secrets.PRIVATE_KEY}}
-
         env:
           CI: true
